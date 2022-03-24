@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Create Account!</div>
+      <form novalidate>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required />
+          <span id="email-error" class="error" aria-live="polite"></span>
+        </div>
+
+        <div>
+          <label for="country">Country</label>
+          <input type="text" name="country" id="country" required />
+          <span id="country-error" class="error" aria-live="polite"></span>
+        </div>
+
+        <div>
+          <label for="zipcode">Zip Code</label>
+          <input
+            type="text"
+            name="zipcode"
+            id="zipcode"
+            pattern="/^\d{5}(?:[- ]?\d{4})?$/"
+            required
+          />
+          <span id="zipcode-error" class="error" aria-live="polite"></span>
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" required />
+          <span id="password-error" class="error" aria-live="polite"></span>
+        </div>
+
+        <div>
+          <label for="confirm">Confirm Password</label>
+          <input type="password" name="confirm" id="confirm" required />
+          <span id="confirm-error" class="error" aria-live="polite"></span>
+        </div>
+
+        <button class="submit">SUBMIT</button>
+      </form>
+    </div>
+  </body>
+</html>
